@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --clr_back: hsl(0, 0%, 8%);
+  --clr_card: hsl(0, 0%, 12%);
+  --clr_back_social: hsl(0, 0%, 20%);
+  --clr_ft_white: hsl(0, 0%, 100%);
+  --clr_ft_green: hsl(75, 94%, 57%);
+  --type_font: "Inter", sans-serif;
+  --ft_small: 400;
+  --ft_med: 600;
+  --ft_big: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--type_font);
+  font-size: 14px;
+}
+
+body {
+  background-color: var(--clr_back);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+
+  & .card_profile {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    width: 400px;
+    height: 550px;
+    border-radius: 15px;
+    background-color: var(--clr_card);
+
+    & .img_avatar {
+      border-radius: 50%;
+      margin: 25px auto;
+      width: 100px;
+    }
+
+    & .name_profile {
+      color: var(--clr_ft_white);
+      font-size: 26px;
+      font-weight: var(--ft_med);
+      margin: 0 0 10px 0;
+    }
+
+    & .location {
+      color: var(--clr_ft_green);
+      font-weight: var(--ft_big);
+      margin-bottom: 30px;
+    }
+
+    & .rol {
+      color: var(--clr_ft_white);
+      font-weight: var(--ft_small);
+      margin-bottom: 30px;
+    }
+
+    & .social {
+      background-color: var(--clr_back_social);
+      padding: 10px;
+      margin: 0 0 15px 0;
+      width: 260px;
+      text-align: center;
+      border-radius: 10px;
+
+      font-weight: var(--ft_med);
+      & a {
+        color: var(--clr_ft_white);
+        text-decoration: none;
+      }
+    }
+
+    & .social:hover {
+      background-color: var(--clr_ft_green);
+      cursor: pointer;
+      transition: 0.5s;
+    }
+  }
+  & .attribution {
+    width: 80%;
+    margin: 15px auto;
+    color: var(--clr_ft_white);
+
+    & a {
+      color: var(--clr_ft_green);
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    & .card_profile {
+      width: 280px;
+    }
+
+    & .attribution {
+      width: 80%;
+      margin: 15px auto;
+      color: var(--clr_ft_white);
+    }
+  }
+}
